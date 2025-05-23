@@ -1,0 +1,101 @@
+1. Nouns and Verbs
+PROBLEM STATEMENT:
+A Dungeons & Dragons character creator. The character creator should ask the user to input their fantasy race and class, as well as ask them for inputs on their individual stats for that character. The program should take everything the user has input and output the results onto a character sheet. (There should also be an option to randomize stats.)
+
+NOUNS:
+character, race, class, stats, sheet
+
+VERBS:
+prompt, input, output, randomize
+
+2. Defining Diagram
+INPUT:
+  charRace
+  charClass
+  stats --
+  STR,DEX,CON,INT,WIS,CHA
+
+PROCESSING:
+  prompt the user for charRace
+  prompt the user for charClass
+  prompt the user for all of their stats
+  OR
+  random input for stats
+  generate a character output from user input gathered
+  display generate character sheet
+
+OUTPUTS:
+  race, class, stats
+  characterSheet
+
+3. Solution Algorithm
+SOLUTION ALGORITHM:
+displayCharacter
+  initialize raceOptions[]
+  initialize classOptions[]
+  initialize stats[]
+
+  initialize loopInput to true
+
+  initialize inputRace
+  initialize inputClass
+  initialize inputStat
+
+  declare character hash{
+    hash entry charName
+    hash entry charRace
+    hash entry charClass
+    hash entry statSTR
+    hash entry statDEX
+    hash entry statCON
+    hash entry statINT
+    hash entry statWIS
+    hash entry statCHA}
+
+  WHILE loopInputs == true
+    character.name = prompt user for name
+    inputRace = prompt user for inputRace
+    IF inputRace == raceOptions
+      character.race = inputRace
+    ENDIF
+    ELSE
+      
+
+4. Checking the Solution Algorithm
+TEST CASE 1:
+INPUTS VALUES:
+Squibbles, Gnome, Bard
+STR 8, DEX 10, CON 14, INT 10, WIS 14, CHA 15
+
+EXPECTED RESULTS:
+Character Sheet:
+Squibbles, Gnome, Bard
+STR 8, DEX 10, CON 14, INT 10, WIS 14, CHA 15
+
+ACTUAL RESULTS:
+
+
+TEST CASE 2:
+INPUTS VALUES:
+Gorgnack, Half-Orc, Barbarian
+STR 15, DEX 15, CON 14, INT 8, WIS 10, CHA 8
+
+EXPECTED RESULTS:
+Character Sheet:
+Gorgnack, Half-Orc, Barbarian
+STR 15, DEX 15, CON 14, INT 8, WIS 10, CHA 8
+
+ACTUAL RESULTS:
+
+
+TEST CASE 3:
+INPUTS VALUES:
+Fendwyll, Half-Elf, Sorcerer
+STR 8, DEX 10, CON 14, INT 12, WIS 15, CHA 13
+
+EXPECTED RESULTS:
+Character Sheet:
+Fendwyll, Half-Elf, Sorcerer
+STR 8, DEX 10, CON 14, INT 12, WIS 15, CHA 13
+
+ACTUAL RESULTS:

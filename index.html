@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Character Creator</title>
+  <link rel="stylesheet" href="resources/dungeon.css">
+</head>
+<body>
+  <section class="container">
+    <header>
+      <H1>Dungeon & Dragons - Character Creator</h1>
+    </header>
+    <main>
+      <label for="charName">Character Name:</label><br>
+      <input type="text" id="charName"><br>
+      
+      <!--Race Dropdown-->
+      <select name="charRace" id="charRace">
+        <option value="dragonborn">Dragonborn</option>
+        <optgroup label="Dwarf">
+          <option value="hill_dwarf">Hill Dwarf</option>
+          <option value="mountain_dwarf">Mountain Dwarf</option>
+        </optgroup>
+        <optgroup label="Elf">
+          <option value="high_elf">High Elf</option>
+          <option value="wood_elf">Wood Elf</option>
+          <option value="dark_elf">Dark Elf</option>
+        </optgroup>
+        <optgroup label="Gnome">
+          <option value="rock_gnome">Rock Gnome</option>
+          <option value="forest_gnome">Forest Gnome</option>
+        </optgroup>
+        <option value="half-elf">Half-Elf</option>
+        <option value="half-orc">Half-Orc</option>
+        <optgroup label="Halfling">
+          <option value="lightfoot_halfling">Lightfoot Halfling</option>
+          <option value="stout_halfling">Stout Halfling</option>
+        </optgroup>
+        <option value="human">Human</option>
+        <option value="tiefling">Tiefling</option>
+      </select>
+      
+      <!--Class Dropdown-->
+      <select name="charClass" id="charClass">
+        <option value="barbarian">Barbarian</option>
+        <option value="bard">Bard</option>
+        <option value="cleric">Cleric</option>
+        <option value="druid">Druid</option>
+        <option value="fighter">Fighter</option>
+        <option value="monk">Monk</option>
+        <option value="paladin">Paladin</option>
+        <option value="ranger">Ranger</option>
+        <option value="rogue">Rogue</option>
+        <option value="sorcerer">Sorcerer</option>
+        <option value="warlock">Warlock</option>
+        <option value="wizard">Wizard</option>
+      </select>
+      
+      <!--Visual Output-->
+      <div id="contentContainer">
+      </div><br>
+      
+      <!--Ability Score Container-->
+      <div id="scoreContainer">
+        <div class="ability">
+          <label for="str">Strength</label><br>
+          <input type="number" id="str" value="8" min="8" max="15">
+        </div>
+        <div class="ability">
+          <label for="dex">Dexterity</label><br>
+          <input type="number" id="dex" value="8" min="8" max="15">
+        </div>
+        <div class="ability">
+          <label for="con">Constitution</label><br>
+          <input type="number" id="con" value="8" min="8" max="15">
+        </div>
+        <div class="ability">
+          <label for="int">Intelligence</label><br>
+          <input type="number" id="int" value="8" min="8" max="15">
+        </div>
+        <div class="ability">
+          <label for="wis">Wisdom</label><br>
+          <input type="number" id="wis" value="8" min="8" max="15">
+        </div>
+        <div class="ability">
+          <label for="cha">Charisma</label><br>
+          <input type="number" id="cha" value="8" min="8" max="15">
+        </div>
+        <img src="resources/images/dice_roll.png" onClick="randomStats()" width=48px>
+      </div></br>
+      
+      <input type="submit" value="submit" onClick="displayCharacterSheet()">
+      <input type="button" value="reset" onClick="resetCharacter()">
+    </main>
+    <footer>
+    </footer>
+    <script src="resources/dungeon.js"></script>
+  </section>
+</body>
+</html>
